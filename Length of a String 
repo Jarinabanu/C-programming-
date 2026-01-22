@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>  // for strlen()
+
+int main() {
+    char str[100];
+    int length = 0;
+
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);  // safer than gets()
+
+    // Remove newline character if present
+    if (str[0] != '\0' && str[strlen(str)-1] == '\n') {
+        str[strlen(str)-1] = '\0';
+    }
+
+    // Method 1: Manually count length
+    while (str[length] != '\0') {
+        length++;
+    }
+    printf("Length of the string (manual count) = %d\n", length);
+
+    // Method 2: Using strlen()
+    printf("Length of the string (using strlen) = %lu\n", strlen(str));
+
+    return 0;
+}
