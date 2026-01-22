@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    float sales[7];  // Array to store sales for each day
+    float total = 0; // Variable to store total weekly sales
+    int i;
+
+    printf("Enter sales for each day of the week:\n");
+
+    for(i = 0; i < 7; i++) {
+        printf("Day %d: ", i + 1);
+        scanf("%f", &sales[i]);
+        total += sales[i];  // Add each day's sales to total
+    }
+
+    printf("\nTotal weekly sales: %.2f\n", total);
+
+    return 0;
+}
