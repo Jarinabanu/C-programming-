@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main() {
+    float rent, food, transport, electricity, others;
+    float total;
+
+    // Input expenses
+    printf("Enter house rent: ");
+    scanf("%f", &rent);
+
+    printf("Enter food expenses: ");
+    scanf("%f", &food);
+
+    printf("Enter transport expenses: ");
+    scanf("%f", &transport);
+
+    printf("Enter electricity bill: ");
+    scanf("%f", &electricity);
+
+    printf("Enter other expenses: ");
+    scanf("%f", &others);
+
+    // Calculate total monthly expenses
+    total = rent + food + transport + electricity + others;
+
+    // Display result
+    printf("\nTotal Monthly Expenses = %.2f\n", total);
+
+    return 0;
+}
